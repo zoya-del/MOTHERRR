@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Dearest Mommy 🧿 ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        body {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fff0f3 40%, #ffe66d 100%);
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .bg-element {
+            position: absolute;
+            color: rgba(255, 183, 3, 0.4);
+            font-size: 26px;
+            animation: floatBackground 7s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        @keyframes floatBackground {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-35px) rotate(20deg); }
+        }
+
+        .page {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 40px 30px;
+            border-radius: 35px;
+            box-shadow: 0 25px 50px rgba(216, 17, 89, 0.15);
+            max-width: 480px;
+            width: 100%;
+            display: none;
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+            animation: cardFloatAnimation 4s ease-in-out infinite, fadeIn 0.6s ease-in-out;
+        }
+
+        @keyframes cardFloatAnimation {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .active-page {
+            display: block;
+        }
+
+        h2, h1 {
+            color: #b5179e;
+            font-weight: 700;
+            font-size: 24px;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        p {
+            color: #4a0e4e;
+            font-size: 14.5px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        input {
+            padding: 15px;
+            font-size: 22px;
+            border: 2px solid #f72585;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 25px;
+            width: 75%;
+            outline: none;
+            letter-spacing: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        button {
+            background: linear-gradient(135deg, #f72585 0%, #b5179e 100%);
+            color: white;
+            border: none;
+            padding: 14px 26px;
+            font-size: 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            box-shadow: 0 8px 20px rgba(247, 37, 133, 0.4);
+            margin: 8px 5px;
+        }
+
+        button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 25px rgba(247, 37, 133, 0.6);
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, #adb5bd 0%, #6c757d 100%);
+            box-shadow: 0 8px 20px rgba(108, 117, 125, 0.3);
+        }
+
+        .polaroid-card {
+            background: white;
+            padding: 15px 15px 20px 15px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            margin: 15px 0;
+            transform: rotate(-1.5deg);
+            transition: 0.3s;
+            animation: subtleTilt 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes subtleTilt {
+            0% { transform: rotate(-1.5deg) translateY(0); }
+            100% { transform: rotate(1.5deg) translateY(-4px); }
+        }
+
+        .polaroid-img {
+            background: linear-gradient(135deg, #ffe66d 0%, #ff758c 100%);
+            height: 150px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 15px;
+            text-align: center;
+            padding: 10px;
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        .letter-box {
+            font-style: italic;
+            color: #3f0338;
+            line-height: 1.8;
+            font-size: 14.5px;
+            background: rgba(255, 240, 243, 0.85);
+            padding: 18px;
+            border-radius: 20px;
+            border: 2px dashed #f72585;
+            text-align: left;
+            margin: 15px 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+            max-height: 250px;
+            overflow-y: auto;
+        }
+
+        ul.reasons-list {
+            padding-left: 20px;
+            color: #3f0338;
+            text-align: left;
+            background: rgba(255, 240, 243, 0.85);
+            padding: 15px 20px;
+            border-radius: 20px;
+            border: 2px dashed #f72585;
+            margin: 15px 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+            max-height: 250px;
+            overflow-y: auto;
+        }
+
+        ul.reasons-list li {
+            margin-bottom: 12px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .floating-icon {
+            font-size: 40px;
+            animation: floatIcon 2.5s ease-in-out infinite;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        @keyframes floatIcon {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-10px) scale(1.1); }
+        }
+
+        .music-box-ui {
+            background: linear-gradient(135deg, #fff0f3 0%, #ffe5ec 100%);
+            border: 2px solid #ff758c;
+            border-radius: 20px;
+            padding: 15px;
+            margin: 15px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sunflower & Pink Theme Background Elements -->
+    <div class="bg-element" style="top: 8%; left: 8%; animation-delay: 0s;">🌻</div>
+    <div class="bg-element" style="top: 15%; right: 12%; animation-delay: 1s;">✨</div>
+    <div class="bg-element" style="bottom: 12%; left: 12%; animation-delay: 2s;">💖</div>
+    <div class="bg-element" style="bottom: 18%; right: 10%; animation-delay: 1.5s;">🌻</div>
+
+    <!-- PAGE 1: Lock Screen -->
+    <div class="page active-page" id="page-1">
+        <div class="floating-icon">🔐</div>
+        <h2>Enter Our Secret Code</h2>
+        <p>Type our special password (0207) to open your experience!</p>
+        <input type="password" id="passcode" maxlength="4" placeholder="••••">
+        <br>
+        <button onclick="checkCode()">Unlock ✨</button>
+    </div>
+
+    <!-- PAGE 2: Welcome / Main Hub -->
+    <div class="page" id="page-2">
+        <div class="floating-icon">🌻</div>
+        <h1>You Unlocked It! 🎉</h1>
+        <p>Ennoda mummy kaaga indha special journey... 💖</p>
+        <button onclick="changePage(3)">Next ➡️</button>
+    </div>
+
+    <!-- PAGE 3: Audio Music Box Page -->
+    <div class="page" id="page-3">
+        <h2>🎶 Music Box</h2>
+        <p>Oru chinna music box... Intha paatu unakaga, Mommy! 🎵</p>
+        
+        <div class="music-box-ui">
+            <p style="font-size: 13px; font-weight: 600; color: #b5179e; margin-bottom: 8px;">✨ Playing Special Melody ✨</p>
+            <!-- Audio Only Embed (Hidden video UI, playing audio via youtube embed trick) -->
+            <iframe width="100%" height="90" src="https://www.youtube.com/embed/8eIRNHLEfCA?autoplay=1&enablejsapi=1" title="Music Box" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="border-radius: 12px;"></iframe>
+        </div>
+
+        <button class="back-btn" onclick="changePage(2)">⬅️ Back</button>
+        <button onclick="changePage(4)">Next ➡️</button>
+    </div>
+
+    <!-- PAGE 4: Heartfelt Letter -->
+    <div class="page" id="page-4">
+        <h2>💌 From Your Son 😚</h2>
+        <div class="letter-box">
+            <p>ennaikum eh ennaiya nee vittu kuduthadheyy ila ! Life la evloo kastam vandhaalum onakaaga naa irupen. Being your non-blood I have never felt like I'm just your non-blood 😭🧿 life la endha oru stage la uhm en mommy ah naa yaarukaagavum vittu kudukaveyy maaten ! En amma nee 🧿😭🫀 Unnoda safe home ah till the end naa irupen nu namburen ! Edhukum kavala padaadha uh pulla un kuda irukaan ! 🎀🧿</p>
+        </div>
+        <button class="back-btn" onclick="changePage(3)">⬅️ Back</button>
+        <button onclick="changePage(5)">Next ➡️</button>
+    </div>
+
+    <!-- PAGE 5: Why You Are The Best -->
+    <div class="page" id="page-5">
+        <h2>💖 Why You're The Best Mommy</h2>
+        <ul class="reasons-list">
+            <li>1. Yaar ennaiya kora sonnalum ! Ennah sari panni , ennah vitu kudukaama Iruka 😭💎</li>
+            <li>2. Even though onaku rendu siblings irundhaalum ! En thambi ivan nu urimai ah soldra 🧿</li>
+            <li>3. Yoosichi pesanum , thapaa nenaichiruvaaga ndra bayam eh vena un ta 💎</li>
+            <li>4. 1000 dhan ennaiya thittunaalum , kora sonnalum adha epdi sari pannalam nu paakra aalum nee dha 🧿💎</li>
+        </ul>
+        <button class="back-btn" onclick="changePage(4)">⬅️ Back</button>
+        <button onclick="changePage(6)">Next ➡️</button>
+    </div>
+
+    <!-- PAGE 6: Open When Messages -->
+    <div class="page" id="page-6">
+        <h2>💌 Open When Messages</h2>
+        <div class="letter-box">
+            <p><b>When you feel low:</b><br>"Onaku nu uh thambi irukaan ! Yaar kasta paduthunaalum , yaar purijikaama ponaalum Avan purijipaan ! Yoosikaama odi vandhuru 🤌🏻"</p>
+            <p style="margin-top: 15px;"><b>When you miss me:</b><br>"Oreyy call un pulla onakaaga vandhu nipaan 🤞🏻"</p>
+        </div>
+        <button class="back-btn" onclick="changePage(5)">⬅️ Back</button>
+        <button onclick="changePage(7)">Next ➡️</button>
+    </div>
+
+    <!-- PAGE 7: Special Final Promise -->
+    <div class="page" id="page-7">
+        <h2>✨ Forever Safe With You</h2>
+        <div class="polaroid-card">
+            <div class="polaroid-img">
+                <span>🐷 & 🐵<br>Cute Pig & Monkey Bond<br> (Always Together) 🫂💖</span>
+            </div>
+            <p style="margin-top: 12px; font-size: 13.5px; color: #6b0559;">forever and ever enaku nu safe ah feel aagura oreyyy uyir nee dha 🧿 ennaikum vittu mattum poiraadha meey 😭</p>
+        </div>
+        <button class="back-btn" onclick="changePage(6)">⬅️ Back</button>
+        <button onclick="changePage(1)">🔄 Restart</button>
+    </div>
+
+    <script>
+        function checkCode() {
+            let code = document.getElementById('passcode').value;
+            if (code === '0207') {
+                changePage(2);
+            } else {
+                alert('Wrong Passcode! Try 0207 ❤️');
+            }
+        }
+
+        function changePage(pageNum) {
+            let pages = document.querySelectorAll('.page');
+            pages.forEach(p => p.classList.remove('active-page'));
+            
+            document.getElementById('page-' + pageNum).classList.add('active-page');
+            window.scrollTo(0, 0);
+        }
+    </script>
+
+</body>
+</html>
